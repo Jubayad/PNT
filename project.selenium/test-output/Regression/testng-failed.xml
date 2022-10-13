@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
+  <parameter name="website" value="https://www.amazon.com"/>
+  <test thread-count="2" parallel="tests" name="kj(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="TestNG.Book">
+        <methods>
+          <include name="Ibrowsers"/>
+          <include name="afterClass"/>
+          <include name="f"/>
+          <include name="SearchFieldVerification"/>
+        </methods>
+      </class> <!-- TestNG.Book -->
+      <class name="TestNG.NewTestSession">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="f"/>
+        </methods>
+      </class> <!-- TestNG.NewTestSession -->
+    </classes>
+  </test> <!-- kj(failed) -->
+  <test thread-count="2" parallel="tests" name="it(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="TestNG.Book">
+        <methods>
+          <include name="Ibrowsers"/>
+          <include name="afterClass"/>
+          <include name="f"/>
+          <include name="SearchFieldVerification"/>
+        </methods>
+      </class> <!-- TestNG.Book -->
+      <class name="TestNG.NewTestSession">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="f"/>
+        </methods>
+      </class> <!-- TestNG.NewTestSession -->
+    </classes>
+  </test> <!-- it(failed) -->
+</suite> <!-- Failed suite [Regression] -->
